@@ -1,0 +1,20 @@
+{
+  "name": "People Support for CM Vijay",
+  "short_name": "CM Vijay Support",
+  "description": "Independent citizen celebration platform for Tamil Nadu's democratic milestone. Create your support poster.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0A0A",
+  "theme_color": "#8B0000",
+  "orientation": "portrait",
+  "lang": "ta",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect width='192' height='192' rx='24' fill='%238B0000'/><text y='130' x='96' font-size='110' text-anchor='middle' fill='%23D4AF37'>✦</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["social", "utilities"],
+  "screenshots": []
+}

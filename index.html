@@ -1,391 +1,1694 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ta" data-lang="ta">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>People Support for CM Vijay | மக்கள் ஆதரவு - முதல்வர் விஜய்</title>
+<meta name="description" content="A citizen celebration platform for Tamil Nadu's democratic milestone. Generate your support poster for CM Vijay and TVK.">
+<meta property="og:title" content="People Support for CM Vijay">
+<meta property="og:description" content="Citizen celebration for Tamil Nadu's democratic choice. Create your support poster.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#8B0000">
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Noto+Sans+Tamil:wght@400;600;700;900&family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+:root {
+  --gold: #D4AF37;
+  --gold-light: #F5D060;
+  --gold-dark: #9A7D1A;
+  --crimson: #8B0000;
+  --crimson-light: #C41E3A;
+  --crimson-bright: #FF2244;
+  --ink: #0A0A0A;
+  --deep: #111118;
+  --surface: #1A1A24;
+  --surface2: #22222E;
+  --glass: rgba(255,255,255,0.05);
+  --glass-border: rgba(212,175,55,0.2);
+  --text: #F0EDE0;
+  --text-dim: #A09880;
+  --radius: 16px;
+  --shadow-gold: 0 0 40px rgba(212,175,55,0.25);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'DM Sans','Noto Sans Tamil',sans-serif;
+  background:var(--deep);
+  color:var(--text);
+  min-height:100vh;
+  overflow-x:hidden;
+}
 
-  <title>People Support for Vijay</title>
+/* ─── PARTICLES ─── */
+#particles{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;overflow:hidden}
+.particle{
+  position:absolute;border-radius:50%;
+  animation:float linear infinite;
+  opacity:0;
+}
+@keyframes float{
+  0%{transform:translateY(100vh) rotate(0deg);opacity:0}
+  10%{opacity:.6}
+  90%{opacity:.3}
+  100%{transform:translateY(-10vh) rotate(720deg);opacity:0}
+}
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;700;900&display=swap" rel="stylesheet">
+/* ─── NAVBAR ─── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(10,10,10,0.92);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--glass-border);
+  padding:12px 24px;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:12px;
+}
+.nav-brand{
+  font-family:'Cinzel',serif;
+  font-size:clamp(14px,2vw,18px);
+  font-weight:900;
+  background:linear-gradient(135deg,var(--gold),var(--gold-light));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  white-space:nowrap;
+}
+.nav-links{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
+.nav-links a{
+  color:var(--text-dim);font-size:13px;font-weight:500;
+  text-decoration:none;padding:6px 12px;border-radius:8px;
+  transition:all .2s;cursor:pointer;
+}
+.nav-links a:hover{color:var(--gold);background:rgba(212,175,55,0.1)}
+.lang-toggle{
+  background:linear-gradient(135deg,var(--crimson),var(--crimson-light));
+  color:#fff;border:none;padding:8px 16px;border-radius:20px;
+  cursor:pointer;font-size:13px;font-weight:600;
+  font-family:'Noto Sans Tamil','DM Sans',sans-serif;
+  transition:all .2s;white-space:nowrap;
+}
+.lang-toggle:hover{transform:scale(1.05);box-shadow:0 0 20px rgba(196,30,58,0.4)}
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Noto Sans Tamil',sans-serif;
-    }
+/* ─── SECTIONS ─── */
+.page{display:none;min-height:100vh;padding-top:70px;position:relative;z-index:1}
+.page.active{display:block}
 
-    body{
-      background:#000;
-      color:#fff;
-      overflow-x:hidden;
-      min-height:100vh;
-      background:
-        radial-gradient(circle at top,#7f0000 0%,#000 60%);
-    }
+/* ─── HOME HERO ─── */
+.hero{
+  min-height:calc(100vh - 70px);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:40px 24px;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(139,0,0,0.35) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 40% at 20% 80%, rgba(212,175,55,0.15) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 50% at 80% 30%, rgba(212,175,55,0.1) 0%, transparent 60%);
+}
+.hero-badge{
+  display:inline-block;
+  background:rgba(212,175,55,0.12);
+  border:1px solid rgba(212,175,55,0.3);
+  color:var(--gold);font-size:12px;font-weight:600;
+  padding:6px 18px;border-radius:20px;
+  margin-bottom:24px;letter-spacing:2px;text-transform:uppercase;
+  animation:pulse-badge 3s ease-in-out infinite;
+}
+@keyframes pulse-badge{
+  0%,100%{box-shadow:0 0 0 0 rgba(212,175,55,0.3)}
+  50%{box-shadow:0 0 0 8px rgba(212,175,55,0)}
+}
+.hero-title{
+  font-family:'Cinzel',serif;
+  font-size:clamp(28px,6vw,72px);
+  font-weight:900;line-height:1.1;
+  background:linear-gradient(180deg,#fff 0%,var(--gold) 50%,var(--gold-dark) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  margin-bottom:12px;
+}
+.hero-subtitle{
+  font-family:'Noto Sans Tamil','Playfair Display',serif;
+  font-size:clamp(20px,4vw,40px);
+  font-weight:700;
+  color:var(--crimson-light);
+  margin-bottom:20px;
+  text-shadow:0 0 30px rgba(196,30,58,0.5);
+}
+.hero-tagline{
+  font-size:clamp(14px,2vw,18px);
+  color:var(--text-dim);max-width:600px;margin:0 auto 40px;
+  line-height:1.7;
+  font-family:'Noto Sans Tamil','DM Sans',sans-serif;
+}
+.hero-cta{
+  display:flex;gap:16px;flex-wrap:wrap;justify-content:center;
+}
+.btn-primary{
+  background:linear-gradient(135deg,var(--crimson),var(--crimson-light));
+  color:#fff;border:none;padding:16px 36px;border-radius:12px;
+  font-size:16px;font-weight:700;cursor:pointer;
+  font-family:'Noto Sans Tamil','DM Sans',sans-serif;
+  transition:all .3s;
+  box-shadow:0 8px 32px rgba(139,0,0,0.4);
+  position:relative;overflow:hidden;
+}
+.btn-primary::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,transparent 30%,rgba(255,255,255,0.15) 50%,transparent 70%);
+  transform:translateX(-100%);transition:transform .4s;
+}
+.btn-primary:hover::after{transform:translateX(100%)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(139,0,0,0.5)}
+.btn-secondary{
+  background:transparent;
+  border:2px solid var(--gold);
+  color:var(--gold);padding:16px 36px;border-radius:12px;
+  font-size:16px;font-weight:700;cursor:pointer;
+  font-family:'Noto Sans Tamil','DM Sans',sans-serif;
+  transition:all .3s;
+}
+.btn-secondary:hover{background:rgba(212,175,55,0.1);transform:translateY(-3px)}
 
-    .container{
-      width:100%;
-      max-width:1200px;
-      margin:auto;
-      padding:20px;
-    }
+/* ─── FEATURES ─── */
+.features-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;max-width:1000px;margin:60px auto 0;padding:0 24px;
+}
+.feature-card{
+  background:var(--glass);
+  border:1px solid var(--glass-border);
+  border-radius:var(--radius);
+  padding:28px;text-align:center;
+  backdrop-filter:blur(12px);
+  transition:all .3s;
+}
+.feature-card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(212,175,55,0.4);
+  box-shadow:var(--shadow-gold);
+}
+.feature-icon{font-size:36px;margin-bottom:12px}
+.feature-title{
+  font-family:'Cinzel',serif;font-size:15px;font-weight:700;
+  color:var(--gold);margin-bottom:8px;
+}
+.feature-desc{font-size:13px;color:var(--text-dim);line-height:1.6;
+  font-family:'Noto Sans Tamil','DM Sans',sans-serif;}
 
-    .hero{
-      min-height:100vh;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-      position:relative;
-      overflow:hidden;
-    }
+/* ─── DISCLAIMER STRIP ─── */
+.disclaimer-strip{
+  background:rgba(212,175,55,0.08);
+  border:1px solid rgba(212,175,55,0.2);
+  border-radius:12px;
+  padding:16px 24px;margin:40px 24px 0;
+  max-width:900px;margin-left:auto;margin-right:auto;
+  font-size:12px;color:var(--text-dim);text-align:center;line-height:1.7;
+  font-family:'Noto Sans Tamil','DM Sans',sans-serif;
+}
+.disclaimer-strip strong{color:var(--gold-light)}
 
-    .hero::before{
-      content:'';
-      position:absolute;
-      width:700px;
-      height:700px;
-      background:rgba(255,215,0,0.08);
-      border-radius:50%;
-      filter:blur(100px);
-      top:-200px;
-    }
+/* ─── GENERATOR PAGE ─── */
+.generator-wrapper{
+  max-width:1100px;margin:0 auto;padding:40px 24px;
+}
+.generator-header{text-align:center;margin-bottom:40px}
+.section-title{
+  font-family:'Cinzel',serif;
+  font-size:clamp(22px,4vw,42px);
+  font-weight:900;
+  background:linear-gradient(135deg,var(--gold),var(--gold-light));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  margin-bottom:8px;
+}
+.section-sub{font-size:14px;color:var(--text-dim);
+  font-family:'Noto Sans Tamil','DM Sans',sans-serif;}
 
-    h1{
-      font-size:clamp(2.5rem,6vw,5rem);
-      color:#ffd700;
-      font-weight:900;
-      z-index:2;
-    }
+.generator-layout{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:32px;align-items:start;
+}
+@media(max-width:768px){.generator-layout{grid-template-columns:1fr}}
 
-    .subtitle{
-      margin-top:20px;
-      max-width:800px;
-      line-height:1.7;
-      color:#ddd;
-      z-index:2;
-      font-size:1.1rem;
-    }
+/* Upload Zone */
+.upload-zone{
+  background:var(--surface);
+  border:2px dashed var(--glass-border);
+  border-radius:var(--radius);
+  padding:48px 24px;text-align:center;
+  cursor:pointer;transition:all .3s;
+  position:relative;
+}
+.upload-zone:hover,.upload-zone.dragover{
+  border-color:var(--gold);
+  background:rgba(212,175,55,0.06);
+  box-shadow:var(--shadow-gold);
+}
+.upload-icon{font-size:48px;margin-bottom:12px}
+.upload-title{font-family:'Cinzel',serif;font-size:18px;color:var(--gold);margin-bottom:8px}
+.upload-desc{font-size:13px;color:var(--text-dim);line-height:1.6;
+  font-family:'Noto Sans Tamil','DM Sans',sans-serif;}
+#fileInput{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
 
-    .card{
-      margin-top:40px;
-      width:100%;
-      max-width:700px;
-      background:rgba(255,255,255,0.08);
-      border:1px solid rgba(255,215,0,0.2);
-      backdrop-filter:blur(14px);
-      padding:30px;
-      border-radius:30px;
-      z-index:2;
-      box-shadow:0 0 40px rgba(0,0,0,0.5);
-    }
+/* Style Selector */
+.style-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:10px;margin-top:20px;
+}
+.style-btn{
+  background:var(--surface2);
+  border:1px solid var(--glass-border);
+  border-radius:10px;padding:12px 8px;text-align:center;
+  cursor:pointer;transition:all .2s;
+}
+.style-btn:hover{border-color:var(--gold);background:rgba(212,175,55,0.08)}
+.style-btn.active{border-color:var(--gold);background:rgba(212,175,55,0.12);box-shadow:0 0 20px rgba(212,175,55,0.2)}
+.style-btn-icon{font-size:24px;display:block;margin-bottom:4px}
+.style-btn-label{font-size:11px;color:var(--text-dim);
+  font-family:'Noto Sans Tamil','DM Sans',sans-serif;}
 
-    .input-group{
-      margin-bottom:20px;
-    }
+/* Slogan Picker */
+.slogan-picker{margin-top:20px}
+.slogan-label{font-size:13px;color:var(--text-dim);margin-bottom:8px;
+  font-family:'Noto Sans Tamil','DM Sans',sans-serif;}
+.slogan-select{
+  width:100%;background:var(--surface2);
+  border:1px solid var(--glass-border);
+  border-radius:10px;padding:12px 16px;
+  color:var(--text);font-size:13px;
+  font-family:'Noto Sans Tamil','DM Sans',sans-serif;
+  cursor:pointer;
+  appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23D4AF37' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 16px center;
+  padding-right:40px;
+}
+.slogan-select:focus{outline:none;border-color:var(--gold)}
 
-    input{
-      width:100%;
-      padding:16px;
-      border:none;
-      border-radius:16px;
-      font-size:1rem;
-      outline:none;
-    }
+/* Poster Preview */
+.poster-panel{
+  background:var(--surface);
+  border:1px solid var(--glass-border);
+  border-radius:var(--radius);padding:24px;
+}
+.poster-preview-wrapper{
+  aspect-ratio:4/5;
+  position:relative;overflow:hidden;
+  border-radius:12px;margin-bottom:16px;
+  background:var(--ink);
+  display:flex;align-items:center;justify-content:center;
+}
+.poster-placeholder{
+  text-align:center;color:var(--text-dim);
+  font-family:'Noto Sans Tamil','DM Sans',sans-serif;
+}
+.poster-placeholder-icon{font-size:48px;margin-bottom:8px}
 
-    button{
-      background:#ffd700;
-      color:#000;
-      border:none;
-      padding:16px 35px;
-      border-radius:50px;
-      font-size:1rem;
-      font-weight:bold;
-      cursor:pointer;
-      transition:0.3s;
-    }
+/* Canvas poster */
+#posterCanvas{
+  width:100%;height:100%;
+  object-fit:contain;
+  display:none;
+  border-radius:8px;
+}
 
-    button:hover{
-      transform:scale(1.05);
-    }
+/* Action buttons */
+.action-row{display:flex;gap:10px;flex-wrap:wrap}
+.btn-action{
+  flex:1;min-width:100px;
+  padding:12px 16px;border-radius:10px;
+  border:none;font-size:13px;font-weight:600;cursor:pointer;
+  font-family:'Noto Sans Tamil','DM Sans',sans-serif;
+  transition:all .2s;display:flex;align-items:center;justify-content:center;gap:6px;
+}
+.btn-download{
+  background:linear-gradient(135deg,var(--gold-dark),var(--gold));
+  color:var(--ink);
+}
+.btn-download:hover{transform:scale(1.03);box-shadow:0 6px 20px rgba(212,175,55,0.3)}
+.btn-whatsapp{background:#25D366;color:#fff}
+.btn-whatsapp:hover{transform:scale(1.03)}
+.btn-share{background:var(--surface2);color:var(--text);border:1px solid var(--glass-border)}
+.btn-share:hover{border-color:var(--gold)}
 
-    .preview{
-      margin-top:40px;
-      text-align:center;
-    }
+/* Share menu */
+.share-menu{
+  display:none;background:var(--surface2);
+  border:1px solid var(--glass-border);
+  border-radius:12px;padding:12px;
+  margin-top:10px;
+}
+.share-menu.open{display:flex;flex-wrap:wrap;gap:8px}
+.share-platform{
+  flex:1;min-width:80px;
+  padding:10px;border-radius:8px;
+  background:var(--surface);border:1px solid var(--glass-border);
+  color:var(--text);font-size:12px;cursor:pointer;
+  text-align:center;transition:all .2s;text-decoration:none;
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+  font-family:'DM Sans',sans-serif;
+}
+.share-platform:hover{border-color:var(--gold);color:var(--gold)}
+.share-platform-icon{font-size:20px}
 
-    .preview img{
-      width:100%;
-      max-width:400px;
-      border-radius:30px;
-      border:3px solid #ffd700;
-      box-shadow:0 0 30px rgba(255,215,0,0.3);
-    }
+/* ─── ERROR UI ─── */
+.error-box{
+  background:rgba(255,34,68,0.08);
+  border:1px solid rgba(255,34,68,0.3);
+  border-radius:12px;padding:20px;
+  display:none;margin-top:12px;
+}
+.error-box.show{display:block}
+.error-title{color:#FF6680;font-weight:700;margin-bottom:8px;font-size:15px}
+.error-desc{color:var(--text-dim);font-size:13px;line-height:1.7;
+  font-family:'Noto Sans Tamil','DM Sans',sans-serif;}
+.error-tips{list-style:none;margin-top:10px}
+.error-tips li{color:var(--text-dim);font-size:12px;padding:4px 0;
+  font-family:'Noto Sans Tamil','DM Sans',sans-serif;}
+.error-tips li::before{content:"→ ";color:var(--gold-light)}
 
-    .download-btn{
-      display:inline-block;
-      margin-top:20px;
-      text-decoration:none;
-      background:#ff0000;
-      color:#fff;
-      padding:14px 30px;
-      border-radius:50px;
-      font-weight:bold;
-    }
+/* Generate button */
+.btn-generate{
+  width:100%;padding:18px;border-radius:12px;
+  background:linear-gradient(135deg,var(--crimson),var(--crimson-light));
+  color:#fff;border:none;font-size:16px;font-weight:700;cursor:pointer;
+  font-family:'Noto Sans Tamil','DM Sans',sans-serif;
+  transition:all .3s;margin-top:16px;
+  position:relative;overflow:hidden;
+}
+.btn-generate:hover{box-shadow:0 8px 32px rgba(139,0,0,0.5);transform:translateY(-2px)}
+.btn-generate:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.btn-generate .spinner{
+  display:none;width:18px;height:18px;border:2px solid rgba(255,255,255,0.3);
+  border-top-color:#fff;border-radius:50%;
+  animation:spin .7s linear infinite;margin:0 auto;
+}
+.btn-generate.loading .spinner{display:block}
+.btn-generate.loading .btn-text{display:none}
+@keyframes spin{to{transform:rotate(360deg)}}
 
-    .toggle{
-      position:fixed;
-      top:20px;
-      right:20px;
-      z-index:100;
-    }
+/* Privacy note */
+.privacy-note{
+  display:flex;align-items:center;gap:8px;
+  background:rgba(46,196,30,0.08);
+  border:1px solid rgba(46,196,30,0.2);
+  border-radius:8px;padding:12px;margin-top:12px;
+  font-size:12px;color:#7BFF70;
+  font-family:'DM Sans',sans-serif;
+}
 
-    .counter{
-      margin-top:20px;
-      color:#ffd700;
-      font-size:2rem;
-      font-weight:900;
-    }
+/* ─── GENERIC PAGE CONTENT ─── */
+.content-page{max-width:800px;margin:0 auto;padding:40px 24px}
+.content-page h1{
+  font-family:'Cinzel',serif;font-size:clamp(24px,4vw,40px);
+  color:var(--gold);margin-bottom:8px;
+}
+.content-page .breadcrumb{color:var(--text-dim);font-size:13px;margin-bottom:32px}
+.content-page h2{
+  font-family:'Cinzel',serif;font-size:20px;
+  color:var(--gold-light);margin:28px 0 12px;
+}
+.content-page p,.content-page li{
+  color:var(--text-dim);font-size:14px;line-height:1.8;
+  font-family:'Noto Sans Tamil','DM Sans',sans-serif;
+}
+.content-page ul{padding-left:20px;margin:8px 0}
+.content-page li{margin-bottom:6px}
+.content-page .highlight{
+  background:rgba(212,175,55,0.1);border-left:3px solid var(--gold);
+  padding:16px 20px;border-radius:0 8px 8px 0;margin:20px 0;
+}
+.content-page .highlight p{color:var(--text)}
 
-    .disclaimer{
-      margin-top:20px;
-      font-size:0.9rem;
-      opacity:0.7;
-      line-height:1.6;
-    }
+/* ─── FOOTER ─── */
+footer{
+  border-top:1px solid var(--glass-border);
+  padding:32px 24px;margin-top:60px;
+  text-align:center;position:relative;z-index:1;
+}
+.footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-bottom:16px}
+.footer-links a{
+  color:var(--text-dim);font-size:13px;text-decoration:none;cursor:pointer;
+  transition:color .2s;
+}
+.footer-links a:hover{color:var(--gold)}
+.footer-copy{font-size:12px;color:var(--text-dim);line-height:1.7;
+  font-family:'Noto Sans Tamil','DM Sans',sans-serif;}
 
-    canvas{
-      display:none;
-    }
+/* ─── LOADING OVERLAY ─── */
+.loading-overlay{
+  display:none;position:fixed;inset:0;z-index:200;
+  background:rgba(10,10,10,0.8);backdrop-filter:blur(8px);
+  align-items:center;justify-content:center;flex-direction:column;gap:16px;
+}
+.loading-overlay.show{display:flex}
+.loading-ring{
+  width:60px;height:60px;border:3px solid rgba(212,175,55,0.2);
+  border-top-color:var(--gold);border-radius:50%;
+  animation:spin .8s linear infinite;
+}
+.loading-text{color:var(--gold);font-family:'Cinzel',serif;font-size:16px}
 
-    @media(max-width:768px){
-      .card{
-        padding:20px;
-      }
-    }
-  </style>
+/* ─── TOAST ─── */
+.toast{
+  position:fixed;bottom:24px;right:24px;z-index:300;
+  background:var(--surface2);border:1px solid var(--glass-border);
+  padding:14px 20px;border-radius:10px;
+  font-size:14px;color:var(--text);
+  font-family:'DM Sans',sans-serif;
+  transform:translateY(100px);opacity:0;
+  transition:all .3s;pointer-events:none;
+}
+.toast.show{transform:translateY(0);opacity:1}
+.toast.success{border-color:rgba(46,196,30,0.4);color:#7BFF70}
+.toast.error{border-color:rgba(255,34,68,0.4);color:#FF8095}
+
+/* ─── PROGRESS INDICATOR ─── */
+.progress-bar{
+  height:3px;background:linear-gradient(90deg,var(--crimson),var(--gold));
+  position:fixed;top:0;left:0;z-index:200;
+  transition:width .3s;
+}
+
+/* ─── IMAGE PREVIEW WITH CROP ─── */
+.image-preview-area{
+  position:relative;overflow:hidden;border-radius:12px;
+  background:var(--ink);
+  display:none;
+  aspect-ratio:1;
+  margin-bottom:16px;
+}
+.image-preview-area.show{display:block}
+#previewImg{
+  width:100%;height:100%;object-fit:cover;
+  display:block;
+}
+.zoom-controls{
+  display:flex;gap:8px;margin-bottom:12px;align-items:center;
+}
+.zoom-btn{
+  background:var(--surface2);border:1px solid var(--glass-border);
+  color:var(--text);width:36px;height:36px;border-radius:8px;
+  cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;
+  transition:all .2s;
+}
+.zoom-btn:hover{border-color:var(--gold);color:var(--gold)}
+.zoom-label{font-size:13px;color:var(--text-dim);margin-left:4px;
+  font-family:'DM Sans',sans-serif;}
+
+/* ─── CONTACT FORM ─── */
+.contact-form{display:flex;flex-direction:column;gap:16px;margin-top:24px}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-label{font-size:13px;color:var(--text-dim);font-family:'DM Sans',sans-serif}
+.form-input,.form-textarea{
+  background:var(--surface2);
+  border:1px solid var(--glass-border);
+  border-radius:10px;padding:12px 16px;
+  color:var(--text);font-size:14px;
+  font-family:'Noto Sans Tamil','DM Sans',sans-serif;
+  transition:border-color .2s;
+}
+.form-input:focus,.form-textarea:focus{outline:none;border-color:var(--gold)}
+.form-textarea{min-height:120px;resize:vertical}
+
+/* ─── RESPONSIVE TWEAKS ─── */
+@media(max-width:600px){
+  .nav-links{gap:2px}
+  .nav-links a{font-size:12px;padding:6px 8px}
+  .hero{padding:24px 16px}
+  .style-grid{grid-template-columns:repeat(2,1fr)}
+  .action-row{flex-direction:column}
+  .btn-action{min-width:unset}
+  footer{padding:24px 16px}
+}
+
+/* Animate-in */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(24px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.fade-up{animation:fadeUp .6s ease forwards}
+.fade-up-2{animation:fadeUp .6s .15s ease forwards;opacity:0}
+.fade-up-3{animation:fadeUp .6s .3s ease forwards;opacity:0}
+.fade-up-4{animation:fadeUp .6s .45s ease forwards;opacity:0}
+</style>
 </head>
 <body>
 
-<div class="toggle">
-  <button onclick="toggleLanguage()">தமிழ் / English</button>
+<!-- Particles -->
+<div id="particles"></div>
+
+<!-- Loading Overlay -->
+<div class="loading-overlay" id="loadingOverlay">
+  <div class="loading-ring"></div>
+  <div class="loading-text" id="loadingText">Generating Poster…</div>
 </div>
 
-<section class="hero">
+<!-- Toast -->
+<div class="toast" id="toast"></div>
 
-  <div class="container">
+<!-- NAV -->
+<nav>
+  <div class="nav-brand" id="navBrand">CM Vijay Support</div>
+  <div class="nav-links">
+    <a onclick="showPage('home')" id="nav-home">Home</a>
+    <a onclick="showPage('generate')" id="nav-generate">Generate</a>
+    <a onclick="showPage('about')" id="nav-about">About</a>
+    <a onclick="showPage('disclaimer')" id="nav-disclaimer">Disclaimer</a>
+    <a onclick="showPage('contact')" id="nav-contact">Contact</a>
+  </div>
+  <button class="lang-toggle" onclick="toggleLang()" id="langToggle">தமிழ்</button>
+</nav>
 
-    <h1 id="title">
-      தமிழக மக்களின் ஆதரவு
-    </h1>
-
-    <p class="subtitle" id="subtitle">
-      அமைதியான ஜனநாயக குடிமக்கள் ஆதரவு தளம்
+<!-- ══════════════════════════════ HOME ══════════════════════════════ -->
+<div class="page active" id="page-home">
+  <section class="hero">
+    <div class="hero-badge fade-up" id="hero-badge">🎉 Tamil Nadu Celebrates</div>
+    <h1 class="hero-title fade-up-2" id="hero-title">People Support<br>for CM Vijay</h1>
+    <p class="hero-subtitle fade-up-3" id="hero-subtitle">மக்கள் ஆதரவு · முதல்வர் விஜய்</p>
+    <p class="hero-tagline fade-up-4" id="hero-tagline">
+      Create your own celebratory support poster.<br>
+      Share the joy of Tamil Nadu's democratic moment with friends and family.
     </p>
-
-    <div class="counter" id="counter">
-      12,000+
+    <div class="hero-cta fade-up-4">
+      <button class="btn-primary" onclick="showPage('generate')" id="cta-create">✨ Create Your Poster</button>
+      <button class="btn-secondary" onclick="showPage('about')" id="cta-about">Learn More</button>
     </div>
+  </section>
 
-    <div class="card">
-
-      <div class="input-group">
-        <input type="text" id="name" placeholder="உங்கள் பெயர்">
-      </div>
-
-      <div class="input-group">
-        <input type="text" id="constituency" placeholder="தொகுதி பெயர்">
-      </div>
-
-      <button onclick="generatePoster()" id="generateBtn">
-        போஸ்டர் உருவாக்கு
-      </button>
-
-      <div class="disclaimer">
-        This is an independent citizen opinion platform created for peaceful democratic expression under Article 19(1)(a) of the Constitution of India.
-      </div>
-
-      <canvas id="posterCanvas"></canvas>
-
-      <div class="preview" id="preview"></div>
-
+  <div class="features-grid">
+    <div class="feature-card fade-up">
+      <div class="feature-icon">📸</div>
+      <div class="feature-title" id="feat1-title">Upload Your Photo</div>
+      <p class="feature-desc" id="feat1-desc">JPG, PNG, WEBP supported. Drag & drop or tap to upload from your device.</p>
     </div>
-
+    <div class="feature-card fade-up-2">
+      <div class="feature-icon">🎨</div>
+      <div class="feature-title" id="feat2-title">Choose Poster Style</div>
+      <p class="feature-desc" id="feat2-desc">Select from multiple cinematic campaign poster designs with gold and crimson themes.</p>
+    </div>
+    <div class="feature-card fade-up-3">
+      <div class="feature-icon">📲</div>
+      <div class="feature-title" id="feat3-title">Share Everywhere</div>
+      <p class="feature-desc" id="feat3-desc">Download or share directly to WhatsApp, Telegram, Facebook, Instagram and X.</p>
+    </div>
+    <div class="feature-card fade-up-4">
+      <div class="feature-icon">🔒</div>
+      <div class="feature-title" id="feat4-title">100% Private</div>
+      <p class="feature-desc" id="feat4-desc">All processing happens on your device. Your photo is never uploaded to any server.</p>
+    </div>
   </div>
 
-</section>
+  <div class="disclaimer-strip fade-up" id="home-disclaimer">
+    <strong>⚖️ Important Disclaimer:</strong>
+    This website is an <strong>independent citizen-created celebration platform</strong> for peaceful democratic expression only.
+    It is <strong>not affiliated</strong> with the Government of Tamil Nadu, Election Commission of India, or any official government authority.
+    All content is citizen-generated for celebratory purposes only.
+  </div>
 
+  <footer>
+    <div class="footer-links">
+      <a onclick="showPage('home')">Home</a>
+      <a onclick="showPage('generate')">Generate Poster</a>
+      <a onclick="showPage('about')">About</a>
+      <a onclick="showPage('privacy')">Privacy Policy</a>
+      <a onclick="showPage('terms')">Terms</a>
+      <a onclick="showPage('disclaimer')">Disclaimer</a>
+      <a onclick="showPage('contact')">Contact</a>
+    </div>
+    <p class="footer-copy" id="footer-copy">
+      © 2026 People Support for CM Vijay · Independent Citizen Platform · Not affiliated with any government or official body.<br>
+      மக்கள் ஆதரவு தளம் · சுதந்திர குடிமக்கள் இயக்கம்
+    </p>
+  </footer>
+</div>
+
+<!-- ══════════════════════════════ GENERATE ══════════════════════════════ -->
+<div class="page" id="page-generate">
+  <div class="generator-wrapper">
+    <div class="generator-header">
+      <h1 class="section-title" id="gen-title">Generate Your Support Poster</h1>
+      <p class="section-sub" id="gen-sub">Upload your photo · Choose a style · Download & Share</p>
+    </div>
+
+    <div class="generator-layout">
+      <!-- LEFT: Controls -->
+      <div>
+        <!-- Upload -->
+        <div class="upload-zone" id="uploadZone" onclick="document.getElementById('fileInput').click()">
+          <input type="file" id="fileInput" accept="image/jpeg,image/jpg,image/png,image/webp,image/*" onchange="handleFileSelect(event)">
+          <div class="upload-icon">📁</div>
+          <div class="upload-title" id="upload-title">Upload Your Photo</div>
+          <p class="upload-desc" id="upload-desc">Drag & Drop or Tap to select<br>JPG · PNG · WEBP · up to 10MB</p>
+        </div>
+
+        <!-- Error Box -->
+        <div class="error-box" id="errorBox">
+          <div class="error-title" id="errorTitle">⚠️ Upload Error</div>
+          <p class="error-desc" id="errorDesc"></p>
+          <ul class="error-tips" id="errorTips"></ul>
+        </div>
+
+        <!-- Image Preview with zoom -->
+        <div class="image-preview-area" id="imagePreviewArea">
+          <img id="previewImg" src="" alt="Preview">
+        </div>
+        <div id="zoomControls" style="display:none">
+          <div class="zoom-controls">
+            <button class="zoom-btn" onclick="adjustZoom(-0.1)">−</button>
+            <button class="zoom-btn" onclick="adjustZoom(0.1)">+</button>
+            <button class="zoom-btn" onclick="resetZoom()">↺</button>
+            <span class="zoom-label" id="zoomLabel">Zoom: 100%</span>
+          </div>
+        </div>
+
+        <!-- Style Selector -->
+        <div style="margin-top:20px">
+          <p class="slogan-label" id="style-label">Choose Poster Style:</p>
+          <div class="style-grid">
+            <div class="style-btn active" onclick="selectStyle(0,this)" id="styleBtn0">
+              <span class="style-btn-icon">🏛️</span>
+              <span class="style-btn-label" id="style0-label">Cinematic</span>
+            </div>
+            <div class="style-btn" onclick="selectStyle(1,this)" id="styleBtn1">
+              <span class="style-btn-icon">🌅</span>
+              <span class="style-btn-label" id="style1-label">Sunrise</span>
+            </div>
+            <div class="style-btn" onclick="selectStyle(2,this)" id="styleBtn2">
+              <span class="style-btn-icon">👑</span>
+              <span class="style-btn-label" id="style2-label">Royal Gold</span>
+            </div>
+            <div class="style-btn" onclick="selectStyle(3,this)" id="styleBtn3">
+              <span class="style-btn-icon">🎊</span>
+              <span class="style-btn-label" id="style3-label">Celebration</span>
+            </div>
+            <div class="style-btn" onclick="selectStyle(4,this)" id="styleBtn4">
+              <span class="style-btn-icon">🌺</span>
+              <span class="style-btn-label" id="style4-label">Traditional</span>
+            </div>
+            <div class="style-btn" onclick="selectStyle(5,this)" id="styleBtn5">
+              <span class="style-btn-icon">⚡</span>
+              <span class="style-btn-label" id="style5-label">Bold</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slogan Picker -->
+        <div class="slogan-picker">
+          <p class="slogan-label" id="slogan-label">Choose Slogan:</p>
+          <select class="slogan-select" id="sloganSelect" onchange="updateSloganPreview()">
+            <option value="0">தமிழகத்தின் புதிய மாற்றம் | New Change for Tamil Nadu</option>
+            <option value="1">மக்களின் தலைவர் | People's Leader</option>
+            <option value="2">விஜய்க்கு வாழ்த்துகள் | Congratulations CM Vijay</option>
+            <option value="3">மக்களின் ஜனநாயக தேர்வு | People's Democratic Choice</option>
+            <option value="4">தமிழ்நாடு கொண்டாடுகிறது | Tamil Nadu Celebrates</option>
+            <option value="5">நம் முதல்வர் விஜய் | Our CM Vijay</option>
+          </select>
+        </div>
+
+        <!-- Name Field -->
+        <div class="slogan-picker">
+          <p class="slogan-label" id="name-label">Your Name (optional):</p>
+          <input type="text" class="form-input" id="nameInput" placeholder="உங்கள் பெயர் / Your Name" oninput="updateNamePreview()">
+        </div>
+
+        <!-- Generate Button -->
+        <button class="btn-generate" id="generateBtn" onclick="generatePoster()">
+          <div class="spinner"></div>
+          <span class="btn-text" id="gen-btn-text">🎨 Generate Poster</span>
+        </button>
+
+        <!-- Privacy Note -->
+        <div class="privacy-note">
+          🔒 <span id="privacy-note-text">All image processing happens locally on your device. Your photo never leaves your browser.</span>
+        </div>
+      </div>
+
+      <!-- RIGHT: Preview + Actions -->
+      <div class="poster-panel">
+        <div class="poster-preview-wrapper" id="posterPreviewWrapper">
+          <div class="poster-placeholder" id="posterPlaceholder">
+            <div class="poster-placeholder-icon">🖼️</div>
+            <p id="placeholder-text">Your poster will appear here</p>
+          </div>
+          <canvas id="posterCanvas"></canvas>
+        </div>
+
+        <!-- Actions -->
+        <div class="action-row" id="actionRow" style="display:none">
+          <button class="btn-action btn-download" onclick="downloadPoster()" id="btn-download">
+            ⬇️ <span id="dl-text">Download</span>
+          </button>
+          <button class="btn-action btn-whatsapp" onclick="shareWhatsApp()" id="btn-whatsapp">
+            💬 WhatsApp
+          </button>
+          <button class="btn-action btn-share" onclick="toggleShareMenu()" id="btn-share">
+            📤 <span id="share-text">Share</span>
+          </button>
+        </div>
+
+        <!-- Share Menu -->
+        <div class="share-menu" id="shareMenu">
+          <a class="share-platform" onclick="sharePlatform('telegram')">
+            <span class="share-platform-icon">✈️</span>Telegram
+          </a>
+          <a class="share-platform" onclick="sharePlatform('facebook')">
+            <span class="share-platform-icon">📘</span>Facebook
+          </a>
+          <a class="share-platform" onclick="sharePlatform('twitter')">
+            <span class="share-platform-icon">🐦</span>X/Twitter
+          </a>
+          <a class="share-platform" onclick="sharePlatform('instagram')">
+            <span class="share-platform-icon">📷</span>Instagram
+          </a>
+          <a class="share-platform" onclick="nativeShare()">
+            <span class="share-platform-icon">📲</span>More
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="disclaimer-strip" style="margin-top:32px">
+      <strong>⚖️ Reminder:</strong> This is an independent citizen platform for peaceful democratic celebration only.
+      Not affiliated with any government, political party, or official authority.
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a onclick="showPage('home')">Home</a>
+      <a onclick="showPage('privacy')">Privacy Policy</a>
+      <a onclick="showPage('terms')">Terms</a>
+      <a onclick="showPage('disclaimer')">Disclaimer</a>
+    </div>
+    <p class="footer-copy">© 2026 People Support for CM Vijay · Independent Citizen Platform</p>
+  </footer>
+</div>
+
+<!-- ══════════════════════════════ ABOUT ══════════════════════════════ -->
+<div class="page" id="page-about">
+  <div class="content-page">
+    <h1 id="about-h1">About This Platform</h1>
+    <p class="breadcrumb">Home → About</p>
+
+    <div class="highlight">
+      <p id="about-highlight">
+        "People Support for CM Vijay" is an independent citizen-created platform to celebrate Tamil Nadu's democratic milestone peacefully. This is entirely non-commercial and non-partisan beyond celebrating the democratic outcome.
+      </p>
+    </div>
+
+    <h2 id="about-what-h">What Is This?</h2>
+    <p id="about-what">This platform allows citizens to create and share celebratory support posters featuring their own photos alongside campaign-style graphics celebrating Tamil Nadu's election result. It is a tool for democratic expression and joy-sharing among citizens.</p>
+
+    <h2 id="about-who-h">Who Built This?</h2>
+    <p id="about-who">This is an independent project built by a Tamil Nadu citizen using open web technologies. It has no commercial funding, no organizational backing, and no affiliation with any political party or government body.</p>
+
+    <h2 id="about-tech-h">Technology</h2>
+    <p id="about-tech">Built entirely with HTML, CSS, and JavaScript. No server. No backend. No database. All poster generation happens on your device using the HTML5 Canvas API. Your photos are never uploaded anywhere.</p>
+
+    <h2 id="about-contact-h">Contact</h2>
+    <p id="about-contact">For questions or concerns about this platform, please use the <a onclick="showPage('contact')" style="color:var(--gold);cursor:pointer">Contact page</a>.</p>
+
+    <div class="disclaimer-strip" style="margin:32px 0 0">
+      <strong>Legal Notice:</strong> This website is not affiliated with the Government of Tamil Nadu, Election Commission of India, TVK party, or any official authority. This is an independent citizen expression platform only.
+    </div>
+  </div>
+  <footer>
+    <p class="footer-copy">© 2026 People Support for CM Vijay · Independent Citizen Platform</p>
+  </footer>
+</div>
+
+<!-- ══════════════════════════════ PRIVACY POLICY ══════════════════════════════ -->
+<div class="page" id="page-privacy">
+  <div class="content-page">
+    <h1>Privacy Policy</h1>
+    <p class="breadcrumb">Home → Privacy Policy</p>
+
+    <div class="highlight">
+      <p><strong>Short version:</strong> We collect nothing. Your photo never leaves your device. We have no server, no database, no analytics, no cookies (beyond browser defaults).</p>
+    </div>
+
+    <h2>Data Collection</h2>
+    <p>This website collects <strong>zero personal data</strong>. There is no server-side component. No analytics. No tracking pixels. No cookies set by this site.</p>
+
+    <h2>Image Processing</h2>
+    <p>All image processing happens entirely within your browser using the HTML5 Canvas API. When you upload a photo:</p>
+    <ul>
+      <li>It is loaded into browser memory only</li>
+      <li>It is drawn onto an HTML Canvas element on your device</li>
+      <li>The resulting poster is generated on your device</li>
+      <li>The download is created on your device</li>
+      <li>At no point does your photo leave your browser</li>
+    </ul>
+
+    <h2>Third Party Services</h2>
+    <p>This site loads fonts from Google Fonts (fonts.googleapis.com). Google may collect limited usage data per their privacy policy. No other third-party services are used.</p>
+
+    <h2>Local Storage</h2>
+    <p>This site does not use localStorage, sessionStorage, or cookies to store any personal data.</p>
+
+    <h2>Children</h2>
+    <p>This site is intended for users 13 years of age and older. We do not knowingly collect data from children.</p>
+
+    <h2>Contact</h2>
+    <p>Questions? Use our <a onclick="showPage('contact')" style="color:var(--gold);cursor:pointer">Contact page</a>.</p>
+  </div>
+  <footer>
+    <p class="footer-copy">© 2026 People Support for CM Vijay · Independent Citizen Platform</p>
+  </footer>
+</div>
+
+<!-- ══════════════════════════════ TERMS ══════════════════════════════ -->
+<div class="page" id="page-terms">
+  <div class="content-page">
+    <h1>Terms & Conditions</h1>
+    <p class="breadcrumb">Home → Terms & Conditions</p>
+
+    <h2>Acceptance</h2>
+    <p>By using this website, you agree to use it only for lawful, peaceful, democratic expression purposes.</p>
+
+    <h2>Permitted Use</h2>
+    <ul>
+      <li>Creating personal celebratory posters for peaceful sharing</li>
+      <li>Sharing generated posters on social media as personal expression</li>
+      <li>Non-commercial, non-political-party use only</li>
+    </ul>
+
+    <h2>Prohibited Use</h2>
+    <ul>
+      <li>Spreading misinformation or fake news</li>
+      <li>Creating content that incites hatred, violence, or discrimination</li>
+      <li>Impersonating official government communications</li>
+      <li>Using content from this site for commercial purposes</li>
+      <li>Creating defamatory content about any individual or group</li>
+      <li>Uploading photos of others without their consent</li>
+    </ul>
+
+    <h2>Disclaimer of Warranties</h2>
+    <p>This site is provided "as is" without warranties of any kind. The creators are not responsible for how generated content is used by third parties.</p>
+
+    <h2>Political Neutrality Statement</h2>
+    <p>While this site celebrates a specific democratic outcome, it is built with respect for all democratic participants and the democratic process itself. It does not condone hate speech against any individual or group.</p>
+  </div>
+  <footer>
+    <p class="footer-copy">© 2026 People Support for CM Vijay · Independent Citizen Platform</p>
+  </footer>
+</div>
+
+<!-- ══════════════════════════════ DISCLAIMER ══════════════════════════════ -->
+<div class="page" id="page-disclaimer">
+  <div class="content-page">
+    <h1 id="disc-h1">Disclaimer</h1>
+    <p class="breadcrumb">Home → Disclaimer</p>
+
+    <div class="highlight">
+      <p><strong id="disc-main">This website is an independent citizen-created celebration platform for peaceful democratic expression. It is not affiliated with the Government of Tamil Nadu, Election Commission of India, TVK party, or any official government authority.</strong></p>
+    </div>
+
+    <h2 id="disc-no-h">Not Official</h2>
+    <p id="disc-no">This website is NOT an official government website. It does NOT represent the views of the Government of Tamil Nadu, any political party, or any government ministry or department. Do not treat any content here as official government communication.</p>
+
+    <h2 id="disc-ec-h">Election Commission</h2>
+    <p id="disc-ec">This website does not use any Election Commission logos, official seals, or government emblems. Any election result references are based on publicly reported information and are for celebratory context only.</p>
+
+    <h2 id="disc-content-h">Content Policy</h2>
+    <ul>
+      <li id="disc-c1">This platform does not promote hate speech of any kind</li>
+      <li id="disc-c2">This platform does not promote caste, religious, or community hatred</li>
+      <li id="disc-c3">This platform does not promote violence</li>
+      <li id="disc-c4">This platform does not defame any individual or group</li>
+      <li id="disc-c5">This platform promotes only peaceful democratic celebration</li>
+    </ul>
+
+    <h2 id="disc-img-h">Image Rights</h2>
+    <p id="disc-img">Users are responsible for ensuring they have the right to use any photos they upload. By uploading a photo, you confirm you have the right to use it. The platform creators are not responsible for user-uploaded content.</p>
+
+    <h2 id="disc-law-h">Governing Law</h2>
+    <p id="disc-law">This platform is intended to comply with all applicable Indian laws including the Information Technology Act, 2000 and the Representation of People Act. If you believe any content violates applicable law, please contact us immediately.</p>
+  </div>
+  <footer>
+    <p class="footer-copy">© 2026 People Support for CM Vijay · Independent Citizen Platform</p>
+  </footer>
+</div>
+
+<!-- ══════════════════════════════ CONTACT ══════════════════════════════ -->
+<div class="page" id="page-contact">
+  <div class="content-page">
+    <h1 id="contact-h1">Contact</h1>
+    <p class="breadcrumb">Home → Contact</p>
+
+    <p id="contact-intro">Have a question, concern, or feedback? Use the form below. Since this platform has no backend, this will open your email client.</p>
+
+    <div class="disclaimer-strip" style="margin:20px 0">
+      <strong>Note:</strong> This is an independent citizen platform. For government matters, please contact official government channels.
+    </div>
+
+    <div class="contact-form">
+      <div class="form-group">
+        <label class="form-label" id="contact-name-label">Your Name</label>
+        <input type="text" class="form-input" id="contactName" placeholder="Your name">
+      </div>
+      <div class="form-group">
+        <label class="form-label" id="contact-subject-label">Subject</label>
+        <input type="text" class="form-input" id="contactSubject" placeholder="Subject">
+      </div>
+      <div class="form-group">
+        <label class="form-label" id="contact-msg-label">Message</label>
+        <textarea class="form-textarea" id="contactMsg" placeholder="Your message..."></textarea>
+      </div>
+      <button class="btn-primary" onclick="sendContact()" id="contact-send-btn">📧 Send via Email</button>
+    </div>
+  </div>
+  <footer>
+    <p class="footer-copy">© 2026 People Support for CM Vijay · Independent Citizen Platform</p>
+  </footer>
+</div>
+
+<!-- ══════════════ JAVASCRIPT ══════════════ -->
 <script>
+// ─── STATE ───
+let currentLang = 'en';
+let currentStyle = 0;
+let uploadedImage = null;
+let zoomLevel = 1.0;
+let generatedDataURL = null;
 
-let currentLanguage = 'ta'
-
-function toggleLanguage(){
-
-  currentLanguage = currentLanguage === 'ta' ? 'en' : 'ta'
-
-  if(currentLanguage === 'ta'){
-
-    document.getElementById('title').innerText =
-      'தமிழக மக்களின் ஆதரவு'
-
-    document.getElementById('subtitle').innerText =
-      'அமைதியான ஜனநாயக குடிமக்கள் ஆதரவு தளம்'
-
-    document.getElementById('name').placeholder =
-      'உங்கள் பெயர்'
-
-    document.getElementById('constituency').placeholder =
-      'தொகுதி பெயர்'
-
-    document.getElementById('generateBtn').innerText =
-      'போஸ்டர் உருவாக்கு'
-
-  }else{
-
-    document.getElementById('title').innerText =
-      'People Support for Vijay'
-
-    document.getElementById('subtitle').innerText =
-      'Peaceful Democratic Citizen Support Platform'
-
-    document.getElementById('name').placeholder =
-      'Your Name'
-
-    document.getElementById('constituency').placeholder =
-      'Constituency'
-
-    document.getElementById('generateBtn').innerText =
-      'Generate Poster'
+// ─── TRANSLATIONS ───
+const T = {
+  en: {
+    navBrand: 'CM Vijay Support',
+    langToggle: 'தமிழ்',
+    'nav-home': 'Home',
+    'nav-generate': 'Generate',
+    'nav-about': 'About',
+    'nav-disclaimer': 'Disclaimer',
+    'nav-contact': 'Contact',
+    'hero-badge': '🎉 Tamil Nadu Celebrates',
+    'hero-title': 'People Support<br>for CM Vijay',
+    'hero-subtitle': 'மக்கள் ஆதரவு · முதல்வர் விஜய்',
+    'hero-tagline': 'Create your own celebratory support poster.<br>Share the joy of Tamil Nadu\'s democratic moment.',
+    'cta-create': '✨ Create Your Poster',
+    'cta-about': 'Learn More',
+    'feat1-title': 'Upload Your Photo',
+    'feat1-desc': 'JPG, PNG, WEBP supported. Drag & drop or tap to upload.',
+    'feat2-title': 'Choose Poster Style',
+    'feat2-desc': 'Multiple cinematic campaign poster designs with gold and crimson themes.',
+    'feat3-title': 'Share Everywhere',
+    'feat3-desc': 'Download or share directly to WhatsApp, Telegram, Facebook, Instagram and X.',
+    'feat4-title': '100% Private',
+    'feat4-desc': 'All processing on your device. Your photo never leaves your browser.',
+    'gen-title': 'Generate Your Support Poster',
+    'gen-sub': 'Upload your photo · Choose a style · Download & Share',
+    'upload-title': 'Upload Your Photo',
+    'upload-desc': 'Drag & Drop or Tap to select\nJPG · PNG · WEBP · up to 10MB',
+    'style-label': 'Choose Poster Style:',
+    'slogan-label': 'Choose Slogan:',
+    'name-label': 'Your Name (optional):',
+    'gen-btn-text': '🎨 Generate Poster',
+    'privacy-note-text': 'All image processing happens locally on your device. Your photo never leaves your browser.',
+    'placeholder-text': 'Your poster will appear here',
+    'dl-text': 'Download',
+    'share-text': 'Share',
+    'about-h1': 'About This Platform',
+    'disc-h1': 'Disclaimer',
+    'contact-h1': 'Contact',
+    'style0-label': 'Cinematic',
+    'style1-label': 'Sunrise',
+    'style2-label': 'Royal Gold',
+    'style3-label': 'Celebration',
+    'style4-label': 'Traditional',
+    'style5-label': 'Bold',
+    'contact-name-label': 'Your Name',
+    'contact-subject-label': 'Subject',
+    'contact-msg-label': 'Message',
+    'contact-send-btn': '📧 Send via Email',
+  },
+  ta: {
+    navBrand: 'முதல்வர் விஜய் ஆதரவு',
+    langToggle: 'English',
+    'nav-home': 'முகப்பு',
+    'nav-generate': 'உருவாக்கு',
+    'nav-about': 'பற்றி',
+    'nav-disclaimer': 'மறுப்பு',
+    'nav-contact': 'தொடர்பு',
+    'hero-badge': '🎉 தமிழ்நாடு கொண்டாடுகிறது',
+    'hero-title': 'மக்கள் ஆதரவு<br>முதல்வர் விஜய்',
+    'hero-subtitle': 'People\'s Support · CM Vijay',
+    'hero-tagline': 'உங்கள் கொண்டாட்ட ஆதரவு போஸ்டரை உருவாக்குங்கள்.<br>தமிழ்நாட்டின் ஜனநாயக தருணத்தை பகிருங்கள்.',
+    'cta-create': '✨ போஸ்டர் உருவாக்கு',
+    'cta-about': 'மேலும் அறிக',
+    'feat1-title': 'படம் பதிவேற்று',
+    'feat1-desc': 'JPG, PNG, WEBP ஆதரவு. இழுத்து விடவும் அல்லது தட்டவும்.',
+    'feat2-title': 'போஸ்டர் பாணி தேர்வு',
+    'feat2-desc': 'பொன் மற்றும் சிவப்பு நிற திரைப்படத் திட்டங்கள்.',
+    'feat3-title': 'எங்கும் பகிர்',
+    'feat3-desc': 'WhatsApp, Telegram, Facebook, Instagram மற்றும் X-ல் பகிரலாம்.',
+    'feat4-title': '100% தனியுரிமை',
+    'feat4-desc': 'அனைத்தும் உங்கள் சாதனத்தில் செயல்படுகிறது. படம் வெளியே செல்வதில்லை.',
+    'gen-title': 'உங்கள் ஆதரவு போஸ்டர் உருவாக்குங்கள்',
+    'gen-sub': 'படம் பதிவேற்று · பாணி தேர்வு · பதிவிறக்கம் & பகிர்வு',
+    'upload-title': 'உங்கள் படத்தை பதிவேற்றுங்கள்',
+    'upload-desc': 'இழுத்து விடவும் அல்லது தட்டவும்\nJPG · PNG · WEBP · 10MB வரை',
+    'style-label': 'போஸ்டர் பாணி தேர்வு:',
+    'slogan-label': 'முழக்கம் தேர்வு:',
+    'name-label': 'உங்கள் பெயர் (விரும்பினால்):',
+    'gen-btn-text': '🎨 போஸ்டர் உருவாக்கு',
+    'privacy-note-text': 'அனைத்து படச் செயலாக்கமும் உங்கள் சாதனத்தில் நடைபெறுகிறது. உங்கள் படம் உலாவியை விட்டு வெளியே செல்வதில்லை.',
+    'placeholder-text': 'உங்கள் போஸ்டர் இங்கே தோன்றும்',
+    'dl-text': 'பதிவிறக்கம்',
+    'share-text': 'பகிர்',
+    'about-h1': 'இந்த தளத்தைப் பற்றி',
+    'disc-h1': 'மறுப்பு அறிவிப்பு',
+    'contact-h1': 'தொடர்பு கொள்ளுங்கள்',
+    'style0-label': 'திரைப்பட',
+    'style1-label': 'சூரியோதயம்',
+    'style2-label': 'அரச பொன்',
+    'style3-label': 'கொண்டாட்டம்',
+    'style4-label': 'பாரம்பரியம்',
+    'style5-label': 'தைரியம்',
+    'contact-name-label': 'உங்கள் பெயர்',
+    'contact-subject-label': 'பொருள்',
+    'contact-msg-label': 'செய்தி',
+    'contact-send-btn': '📧 மின்னஞ்சல் அனுப்பு',
   }
+};
+
+// ─── SLOGANS ───
+const SLOGANS = [
+  { ta: 'தமிழகத்தின் புதிய மாற்றம்', en: 'New Change for Tamil Nadu' },
+  { ta: 'மக்களின் தலைவர்', en: "People's Leader" },
+  { ta: 'விஜய்க்கு வாழ்த்துகள்', en: 'Congratulations CM Vijay' },
+  { ta: 'மக்களின் ஜனநாயக தேர்வு', en: "People's Democratic Choice" },
+  { ta: 'தமிழ்நாடு கொண்டாடுகிறது', en: 'Tamil Nadu Celebrates' },
+  { ta: 'நம் முதல்வர் விஜய்', en: 'Our CM Vijay' },
+];
+
+// Poster style configs
+const POSTER_STYLES = [
+  {
+    name: 'Cinematic',
+    bg: ['#0A0A0A','#1A0005','#2A0010','#0A0A0A'],
+    accent: '#D4AF37',
+    accent2: '#8B0000',
+    headerFont: '900 italic',
+    flourish: true,
+  },
+  {
+    name: 'Sunrise',
+    bg: ['#0A0020','#1A0840','#3A0010','#0A0020'],
+    accent: '#F5A623',
+    accent2: '#C41E3A',
+    headerFont: '700',
+    flourish: false,
+  },
+  {
+    name: 'Royal Gold',
+    bg: ['#0D0800','#1A1000','#2A1800','#0D0800'],
+    accent: '#FFD700',
+    accent2: '#B8860B',
+    headerFont: '900',
+    flourish: true,
+  },
+  {
+    name: 'Celebration',
+    bg: ['#0A0A1A','#1A0A10','#2A0A20','#0A0A1A'],
+    accent: '#FF6B35',
+    accent2: '#C41E3A',
+    headerFont: '700 italic',
+    flourish: false,
+  },
+  {
+    name: 'Traditional',
+    bg: ['#0A0800','#1A0C00','#2A1400','#0A0800'],
+    accent: '#CC8800',
+    accent2: '#8B0000',
+    headerFont: '900',
+    flourish: true,
+  },
+  {
+    name: 'Bold',
+    bg: ['#050005','#0A000A','#200020','#050005'],
+    accent: '#E040FB',
+    accent2: '#8B0000',
+    headerFont: '900 italic',
+    flourish: false,
+  },
+];
+
+// ─── NAVIGATION ───
+function showPage(name) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const el = document.getElementById('page-' + name);
+  if (el) el.classList.add('active');
+  window.scrollTo(0, 0);
 }
 
-function generatePoster(){
+// ─── LANGUAGE TOGGLE ───
+function toggleLang() {
+  currentLang = currentLang === 'en' ? 'ta' : 'en';
+  applyLang();
+}
 
-  const name =
-    document.getElementById('name').value
-
-  const constituency =
-    document.getElementById('constituency').value
-
-  if(!name || !constituency){
-    alert(
-      currentLanguage === 'ta'
-      ? 'அனைத்து விவரங்களையும் உள்ளிடவும்'
-      : 'Please fill all details'
-    )
-    return
-  }
-
-  const canvas =
-    document.getElementById('posterCanvas')
-
-  const ctx =
-    canvas.getContext('2d')
-
-  canvas.width = 1080
-  canvas.height = 1350
-
-  const gradient =
-    ctx.createLinearGradient(0,0,0,1350)
-
-  gradient.addColorStop(0,'#000000')
-  gradient.addColorStop(1,'#7f0000')
-
-  ctx.fillStyle = gradient
-  ctx.fillRect(0,0,1080,1350)
-
-  ctx.fillStyle = '#ffd700'
-  ctx.font = 'bold 70px Noto Sans Tamil'
-  ctx.textAlign = 'center'
-
-  ctx.fillText(
-    currentLanguage === 'ta'
-    ? 'தமிழக மக்களின் ஆதரவு'
-    : 'People Support for Vijay',
-    540,
-    150
-  )
-
-  ctx.fillStyle = '#ffffff'
-  ctx.font = 'bold 90px Noto Sans Tamil'
-
-  ctx.fillText(name,540,500)
-
-  ctx.font = '55px Noto Sans Tamil'
-
-  ctx.fillText(constituency,540,620)
-
-  ctx.fillStyle = '#ffd700'
-  ctx.font = 'bold 65px Noto Sans Tamil'
-
-  ctx.fillText(
-    currentLanguage === 'ta'
-    ? 'விஜய்க்கு ஆதரவு'
-    : 'Support Vijay',
-    540,
-    850
-  )
-
-  ctx.fillStyle = '#ffffff'
-  ctx.font = '35px Noto Sans Tamil'
-
-  ctx.fillText(
-    'Independent Citizen Democratic Support Platform',
-    540,
-    1180
-  )
-
-  ctx.font = '28px Noto Sans Tamil'
-
-  ctx.fillText(
-    'Peaceful democratic expression under Article 19(1)(a)',
-    540,
-    1230
-  )
-
-  const image =
-    canvas.toDataURL('image/png')
-
-  document.getElementById('preview').innerHTML = `
-    <img src="${image}" />
-
-    <br>
-
-    <a
-      class="download-btn"
-      href="${image}"
-      download="vijay-support-poster.png"
-    >
-      ${
-        currentLanguage === 'ta'
-        ? 'பதிவிறக்கம் செய்யவும்'
-        : 'Download Poster'
+function applyLang() {
+  const t = T[currentLang];
+  Object.entries(t).forEach(([id, val]) => {
+    const el = document.getElementById(id);
+    if (el) {
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+        el.placeholder = val;
+      } else {
+        el.innerHTML = val;
       }
-    </a>
-  `
+    }
+  });
+  document.documentElement.lang = currentLang;
 }
 
-setInterval(()=>{
+// ─── PARTICLES ───
+function initParticles() {
+  const container = document.getElementById('particles');
+  const colors = ['#D4AF37','#8B0000','#C41E3A','#F5D060','#FFD700'];
+  for (let i = 0; i < 30; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    const size = Math.random() * 6 + 2;
+    p.style.cssText = `
+      width:${size}px;height:${size}px;
+      left:${Math.random()*100}%;
+      background:${colors[Math.floor(Math.random()*colors.length)]};
+      animation-duration:${Math.random()*15+10}s;
+      animation-delay:${Math.random()*10}s;
+    `;
+    container.appendChild(p);
+  }
+}
 
-  let current =
-    parseInt(
-      localStorage.getItem('supportCount') || '12000'
-    )
+// ─── DRAG AND DROP ───
+function initDragDrop() {
+  const zone = document.getElementById('uploadZone');
+  zone.addEventListener('dragover', e => {
+    e.preventDefault();
+    zone.classList.add('dragover');
+  });
+  zone.addEventListener('dragleave', () => zone.classList.remove('dragover'));
+  zone.addEventListener('drop', e => {
+    e.preventDefault();
+    zone.classList.remove('dragover');
+    const file = e.dataTransfer?.files?.[0];
+    if (file) processFile(file);
+  });
+}
 
-  current += Math.floor(Math.random()*3)
+// ─── FILE HANDLING ───
+function handleFileSelect(event) {
+  const file = event.target.files?.[0];
+  if (file) processFile(file);
+}
 
-  localStorage.setItem('supportCount',current)
+function processFile(file) {
+  hideError();
 
-  document.getElementById('counter').innerText =
-    current.toLocaleString() + '+'
+  // Validate
+  const allowedTypes = ['image/jpeg','image/jpg','image/png','image/webp','image/heic','image/heif'];
+  if (!file.type.startsWith('image/')) {
+    showError('Unsupported File Format',
+      'The selected file is not an image.',
+      ['Try uploading a JPG, PNG, or WEBP image.',
+       'Make sure you selected an image file.',
+       'If uploading from camera, save as JPG first.']
+    );
+    return;
+  }
+  if (file.size > 10 * 1024 * 1024) {
+    showError('Image Too Large',
+      `File size: ${(file.size/1024/1024).toFixed(1)}MB. Maximum allowed: 10MB.`,
+      ['Reduce image size below 10MB.',
+       'Use a photo editing app to compress the image.',
+       'Take a lower resolution photo.']
+    );
+    return;
+  }
 
-},3000)
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    const img = new Image();
+    img.onload = () => {
+      uploadedImage = img;
+      zoomLevel = 1.0;
+      document.getElementById('zoomLabel').textContent = 'Zoom: 100%';
 
+      // Show preview
+      const previewImg = document.getElementById('previewImg');
+      previewImg.src = e.target.result;
+      previewImg.style.transform = `scale(${zoomLevel})`;
+      document.getElementById('imagePreviewArea').classList.add('show');
+      document.getElementById('zoomControls').style.display = 'flex';
+
+      // Update upload zone
+      document.getElementById('uploadZone').style.borderColor = 'var(--gold)';
+      document.getElementById('upload-title').textContent = '✅ Photo Ready';
+      document.getElementById('upload-desc').textContent = `${file.name} · ${(file.size/1024).toFixed(0)}KB`;
+
+      showToast('✅ Photo uploaded successfully!', 'success');
+    };
+    img.onerror = () => {
+      showError('Image Load Failed',
+        'The selected file could not be loaded as an image.',
+        ['The file may be corrupted.',
+         'Try a different photo.',
+         'Use modern Chrome, Edge, or Firefox browser.']
+      );
+    };
+    img.src = e.target.result;
+  };
+  reader.onerror = () => {
+    showError('File Read Error',
+      'Could not read the selected file.',
+      ['Check browser permissions.',
+       'Refresh browser and retry.',
+       'Try a different file.']
+    );
+  };
+  reader.readAsDataURL(file);
+}
+
+// ─── ZOOM ───
+function adjustZoom(delta) {
+  zoomLevel = Math.max(0.5, Math.min(3.0, zoomLevel + delta));
+  const img = document.getElementById('previewImg');
+  img.style.transform = `scale(${zoomLevel})`;
+  document.getElementById('zoomLabel').textContent = `Zoom: ${Math.round(zoomLevel*100)}%`;
+}
+function resetZoom() {
+  zoomLevel = 1.0;
+  const img = document.getElementById('previewImg');
+  img.style.transform = 'scale(1)';
+  document.getElementById('zoomLabel').textContent = 'Zoom: 100%';
+}
+
+// ─── STYLE SELECTION ───
+function selectStyle(index, btn) {
+  document.querySelectorAll('.style-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  currentStyle = index;
+}
+
+function updateSloganPreview() {}
+function updateNamePreview() {}
+
+// ─── POSTER GENERATION ───
+async function generatePoster() {
+  if (!uploadedImage) {
+    showError('No Photo Selected',
+      'Please upload a photo first.',
+      ['Click the upload area above to choose a photo.',
+       'Drag and drop an image onto the upload area.']
+    );
+    return;
+  }
+
+  const btn = document.getElementById('generateBtn');
+  btn.classList.add('loading');
+  btn.disabled = true;
+
+  try {
+    await new Promise(r => setTimeout(r, 100)); // yield to browser
+    await drawPoster();
+    showToast('🎨 Poster generated!', 'success');
+  } catch (err) {
+    console.error(err);
+    showError('Poster Generation Failed',
+      'An error occurred while creating your poster.',
+      ['Refresh the browser and try again.',
+       'Use Chrome, Edge, or Firefox browser.',
+       'Try a different image format (JPG or PNG).',
+       'Allow browser storage permissions.']
+    );
+  } finally {
+    btn.classList.remove('loading');
+    btn.disabled = false;
+  }
+}
+
+async function drawPoster() {
+  const style = POSTER_STYLES[currentStyle];
+  const sloganIdx = parseInt(document.getElementById('sloganSelect').value);
+  const slogan = SLOGANS[sloganIdx];
+  const userName = document.getElementById('nameInput').value.trim();
+
+  const W = 800;
+  const H = 1000;
+
+  const canvas = document.getElementById('posterCanvas');
+  canvas.width = W;
+  canvas.height = H;
+  const ctx = canvas.getContext('2d');
+
+  // ── Background gradient
+  const bgGrad = ctx.createRadialGradient(W/2, H*0.4, 0, W/2, H/2, H*0.9);
+  bgGrad.addColorStop(0, style.bg[1]);
+  bgGrad.addColorStop(0.5, style.bg[2]);
+  bgGrad.addColorStop(1, style.bg[3]);
+  ctx.fillStyle = bgGrad;
+  ctx.fillRect(0, 0, W, H);
+
+  // ── Decorative geometric background circles
+  ctx.save();
+  ctx.globalAlpha = 0.08;
+  ctx.strokeStyle = style.accent;
+  ctx.lineWidth = 1;
+  for (let i = 0; i < 5; i++) {
+    ctx.beginPath();
+    ctx.arc(W/2, H*0.45, 150 + i*70, 0, Math.PI*2);
+    ctx.stroke();
+  }
+  ctx.restore();
+
+  // ── Top header band
+  const headerGrad = ctx.createLinearGradient(0, 0, W, 0);
+  headerGrad.addColorStop(0, style.bg[0]);
+  headerGrad.addColorStop(0.5, style.accent2 + 'DD');
+  headerGrad.addColorStop(1, style.bg[0]);
+  ctx.fillStyle = headerGrad;
+  ctx.fillRect(0, 0, W, 90);
+
+  // ── Top gold line
+  const goldLineGrad = ctx.createLinearGradient(0, 0, W, 0);
+  goldLineGrad.addColorStop(0, 'transparent');
+  goldLineGrad.addColorStop(0.2, style.accent);
+  goldLineGrad.addColorStop(0.8, style.accent);
+  goldLineGrad.addColorStop(1, 'transparent');
+  ctx.fillStyle = goldLineGrad;
+  ctx.fillRect(0, 88, W, 3);
+
+  // ── Party name / header
+  ctx.textAlign = 'center';
+  ctx.fillStyle = style.accent;
+  ctx.font = `bold 18px 'Noto Sans Tamil', serif`;
+  ctx.fillText('தமிழ்நாடு வென்றது · Tamil Nadu Wins', W/2, 36);
+  ctx.fillStyle = 'rgba(255,255,255,0.7)';
+  ctx.font = '13px DM Sans, sans-serif';
+  ctx.fillText('People\'s Democratic Choice  |  TVK · CM Vijay', W/2, 58);
+
+  // ── User photo area (circular/rounded)
+  const imgSize = 340;
+  const imgX = (W - imgSize) / 2;
+  const imgY = 108;
+  const imgR = 16;
+
+  // Photo frame glow
+  ctx.save();
+  ctx.shadowColor = style.accent;
+  ctx.shadowBlur = 40;
+  ctx.strokeStyle = style.accent;
+  ctx.lineWidth = 4;
+  roundRect(ctx, imgX - 2, imgY - 2, imgSize + 4, imgSize + 4, imgR + 2);
+  ctx.stroke();
+  ctx.restore();
+
+  // Clip and draw user photo
+  ctx.save();
+  roundRect(ctx, imgX, imgY, imgSize, imgSize, imgR);
+  ctx.clip();
+
+  // Draw image maintaining aspect ratio
+  const img = uploadedImage;
+  const scale = Math.max(imgSize / img.width, imgSize / img.height) * zoomLevel;
+  const drawW = img.width * scale;
+  const drawH = img.height * scale;
+  const drawX = imgX + (imgSize - drawW) / 2;
+  const drawY = imgY + (imgSize - drawH) / 2;
+  ctx.drawImage(img, drawX, drawY, drawW, drawH);
+
+  // Overlay gradient on photo bottom
+  const photoOverlay = ctx.createLinearGradient(0, imgY + imgSize * 0.6, 0, imgY + imgSize);
+  photoOverlay.addColorStop(0, 'transparent');
+  photoOverlay.addColorStop(1, 'rgba(0,0,0,0.7)');
+  ctx.fillStyle = photoOverlay;
+  ctx.fillRect(imgX, imgY, imgSize, imgSize);
+
+  ctx.restore();
+
+  // ── Ornamental divider
+  const divY = imgY + imgSize + 28;
+  drawOrnament(ctx, W/2, divY, style.accent, 200);
+
+  // ── Tamil slogan (main)
+  const sloganY = divY + 50;
+  ctx.textAlign = 'center';
+
+  // Glow effect on slogan
+  ctx.save();
+  ctx.shadowColor = style.accent;
+  ctx.shadowBlur = 20;
+  ctx.fillStyle = style.accent;
+  ctx.font = `${style.headerFont} 38px 'Noto Sans Tamil', 'Playfair Display', serif`;
+  wrapText(ctx, slogan.ta, W/2, sloganY, W - 60, 48);
+  ctx.restore();
+
+  // English slogan
+  ctx.fillStyle = 'rgba(255,255,255,0.85)';
+  ctx.font = `italic 20px 'Playfair Display', serif`;
+  ctx.fillText(slogan.en, W/2, sloganY + 58);
+
+  // ── Large CM name
+  const nameY = sloganY + 110;
+  ctx.save();
+  ctx.shadowColor = style.accent;
+  ctx.shadowBlur = 30;
+  const nameGrad = ctx.createLinearGradient(0, nameY - 40, 0, nameY + 10);
+  nameGrad.addColorStop(0, '#FFFFFF');
+  nameGrad.addColorStop(0.4, style.accent);
+  nameGrad.addColorStop(1, style.accent2);
+  ctx.fillStyle = nameGrad;
+  ctx.font = `900 italic 56px 'Cinzel', 'Playfair Display', serif`;
+  ctx.fillText('CM VIJAY', W/2, nameY);
+  ctx.restore();
+
+  // ── TVK line
+  ctx.fillStyle = 'rgba(255,255,255,0.6)';
+  ctx.font = `14px 'Noto Sans Tamil', 'DM Sans', sans-serif`;
+  ctx.fillText('தமிழக வெற்றிக் கழகம் · Tamilaga Vettri Kazhagam', W/2, nameY + 30);
+
+  // ── User name (if provided)
+  if (userName) {
+    const unY = nameY + 70;
+    ctx.fillStyle = style.accent;
+    ctx.font = `600 20px 'Noto Sans Tamil', 'DM Sans', sans-serif`;
+    ctx.fillText(`— ${userName} ஆதரிக்கிறார் —`, W/2, unY);
+  }
+
+  // ── Bottom band
+  const bottomY = H - 80;
+  const bottomGrad = ctx.createLinearGradient(0, bottomY, 0, H);
+  bottomGrad.addColorStop(0, 'transparent');
+  bottomGrad.addColorStop(0.5, 'rgba(0,0,0,0.8)');
+  bottomGrad.addColorStop(1, '#000');
+  ctx.fillStyle = bottomGrad;
+  ctx.fillRect(0, bottomY, W, H - bottomY);
+
+  // Bottom gold line
+  ctx.fillStyle = goldLineGrad;
+  ctx.fillRect(0, bottomY + 2, W, 2);
+
+  // Bottom text
+  ctx.fillStyle = 'rgba(255,255,255,0.4)';
+  ctx.font = '11px DM Sans, sans-serif';
+  ctx.fillText('Independent Citizen Celebration · Not affiliated with any government or official body', W/2, H - 30);
+  ctx.fillStyle = style.accent + '99';
+  ctx.font = '13px Noto Sans Tamil, DM Sans, sans-serif';
+  ctx.fillText('மக்கள் ஆதரவு தளம் · peoplesupportvijay.github.io', W/2, H - 12);
+
+  // ── Corner flourishes (if style supports)
+  if (style.flourish) {
+    drawCornerFlourish(ctx, 20, 95, style.accent, 0);
+    drawCornerFlourish(ctx, W - 20, 95, style.accent, 1);
+  }
+
+  // Show canvas
+  canvas.style.display = 'block';
+  document.getElementById('posterPlaceholder').style.display = 'none';
+  document.getElementById('actionRow').style.display = 'flex';
+
+  // Store data URL
+  generatedDataURL = canvas.toDataURL('image/png', 0.95);
+}
+
+// ── Canvas helpers
+function roundRect(ctx, x, y, w, h, r) {
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.lineTo(x + w - r, y);
+  ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+  ctx.lineTo(x + w, y + h - r);
+  ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+  ctx.lineTo(x + r, y + h);
+  ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+  ctx.lineTo(x, y + r);
+  ctx.quadraticCurveTo(x, y, x + r, y);
+  ctx.closePath();
+}
+
+function drawOrnament(ctx, x, y, color, width) {
+  ctx.save();
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 1.5;
+  ctx.globalAlpha = 0.7;
+  const hw = width / 2;
+  ctx.beginPath();
+  ctx.moveTo(x - hw, y);
+  ctx.lineTo(x - 30, y);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(x + 30, y);
+  ctx.lineTo(x + hw, y);
+  ctx.stroke();
+  // Center diamond
+  ctx.beginPath();
+  ctx.moveTo(x, y - 8);
+  ctx.lineTo(x + 12, y);
+  ctx.lineTo(x, y + 8);
+  ctx.lineTo(x - 12, y);
+  ctx.closePath();
+  ctx.fillStyle = color;
+  ctx.globalAlpha = 0.9;
+  ctx.fill();
+  ctx.restore();
+}
+
+function drawCornerFlourish(ctx, x, y, color, side) {
+  ctx.save();
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 2;
+  ctx.globalAlpha = 0.5;
+  const dir = side === 0 ? 1 : -1;
+  ctx.beginPath();
+  ctx.moveTo(x, y);
+  ctx.lineTo(x + dir * 40, y);
+  ctx.moveTo(x, y);
+  ctx.lineTo(x, y + 40);
+  ctx.stroke();
+  ctx.restore();
+}
+
+function wrapText(ctx, text, x, y, maxWidth, lineH) {
+  const words = text.split(' ');
+  let line = '';
+  let lineY = y;
+  for (let i = 0; i < words.length; i++) {
+    const test = line + words[i] + ' ';
+    if (ctx.measureText(test).width > maxWidth && i > 0) {
+      ctx.fillText(line.trim(), x, lineY);
+      line = words[i] + ' ';
+      lineY += lineH;
+    } else {
+      line = test;
+    }
+  }
+  ctx.fillText(line.trim(), x, lineY);
+}
+
+// ─── DOWNLOAD ───
+function downloadPoster() {
+  if (!generatedDataURL) { showToast('Generate a poster first!', 'error'); return; }
+  const a = document.createElement('a');
+  a.download = `CMVijay-Support-Poster-${Date.now()}.png`;
+  a.href = generatedDataURL;
+  a.click();
+  showToast('⬇️ Poster downloaded!', 'success');
+}
+
+// ─── SHARE ───
+function shareWhatsApp() {
+  if (!generatedDataURL) { showToast('Generate a poster first!', 'error'); return; }
+  const text = encodeURIComponent('🎉 தமிழ்நாட்டின் மக்கள் தலைவர் முதல்வர் விஜய்க்கு வாழ்த்துகள்! | Congratulations CM Vijay! People\'s Democratic Choice! #CMVijay #TVK #TamilNadu');
+  window.open(`https://wa.me/?text=${text}`, '_blank');
+  showToast('Opening WhatsApp...', 'success');
+}
+
+function toggleShareMenu() {
+  const menu = document.getElementById('shareMenu');
+  menu.classList.toggle('open');
+}
+
+function sharePlatform(platform) {
+  const text = encodeURIComponent('🎉 Congratulations CM Vijay! மக்களின் ஜனநாயக தேர்வு! #CMVijay #TVK #TamilNadu #TamilNaduElection2026');
+  const urls = {
+    telegram: `https://t.me/share/url?url=${encodeURIComponent(location.href)}&text=${text}`,
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(location.href)}`,
+    twitter: `https://twitter.com/intent/tweet?text=${text}&url=${encodeURIComponent(location.href)}`,
+    instagram: null,
+  };
+  if (platform === 'instagram') {
+    showToast('📲 Save poster first, then share to Instagram!', 'success');
+    downloadPoster();
+  } else if (urls[platform]) {
+    window.open(urls[platform], '_blank');
+  }
+}
+
+async function nativeShare() {
+  if (!generatedDataURL) { showToast('Generate poster first!', 'error'); return; }
+  if (navigator.share) {
+    try {
+      const blob = await fetch(generatedDataURL).then(r => r.blob());
+      const file = new File([blob], 'CMVijay-Support.png', { type: 'image/png' });
+      await navigator.share({
+        title: 'People Support for CM Vijay',
+        text: 'Congratulations CM Vijay! மக்களின் ஜனநாயக தேர்வு! #CMVijay #TVK',
+        files: [file],
+      });
+    } catch(e) {
+      downloadPoster();
+    }
+  } else {
+    downloadPoster();
+  }
+}
+
+// ─── ERROR HANDLING ───
+function showError(title, desc, tips) {
+  const box = document.getElementById('errorBox');
+  document.getElementById('errorTitle').textContent = '⚠️ ' + title;
+  document.getElementById('errorDesc').textContent = desc;
+  const tipsList = document.getElementById('errorTips');
+  tipsList.innerHTML = tips.map(t => `<li>${t}</li>`).join('');
+  box.classList.add('show');
+}
+function hideError() {
+  document.getElementById('errorBox').classList.remove('show');
+}
+
+// ─── TOAST ───
+function showToast(msg, type='success') {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = `toast ${type} show`;
+  setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+// ─── CONTACT ───
+function sendContact() {
+  const name = document.getElementById('contactName').value;
+  const subject = document.getElementById('contactSubject').value;
+  const msg = document.getElementById('contactMsg').value;
+  if (!msg.trim()) { showToast('Please write a message', 'error'); return; }
+  const mailBody = encodeURIComponent(`Name: ${name}\n\nMessage:\n${msg}`);
+  window.location.href = `mailto:contact@example.com?subject=${encodeURIComponent(subject)}&body=${mailBody}`;
+}
+
+// ─── PWA ───
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch(() => {});
+  });
+}
+
+// ─── INIT ───
+document.addEventListener('DOMContentLoaded', () => {
+  initParticles();
+  initDragDrop();
+  applyLang();
+});
 </script>
-
 </body>
 </html>
